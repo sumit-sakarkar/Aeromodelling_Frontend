@@ -1,17 +1,34 @@
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Add icon library -->
+//<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
+# body{
+ min height : 400px;
+ margin=top: 1%;
+ }
+
+* {    
+ margin: 0;
+ padding: 0;
+  }
+.imgbox {
+display: grid;
+height: 0%;
+}
+.center-fit {
+max-width: 100%;
+max-height: 100%;
+margin: 5% auto;
+}
+
 .btp {
-  background-color: tomato;	
+  background-color: tomato;
   border: none;
   color: white;
-  position: absolute;
-  TOP:280px;LEFT:50px;
-WIDTH:100px;HEIGHT:400px;
+WIDTH:5% ;HEIGHT:40%;
+ float : left;
   font-size: 25px;
   cursor: pointer;
 }
@@ -20,12 +37,18 @@ WIDTH:100px;HEIGHT:400px;
   background-color: tomato;	
   border: none;
   color: white;
-  position: absolute;
-  TOP:280px;LEFT:1250px;
-WIDTH:100px;HEIGHT:400px;
+ float : right;
+WIDTH:5% ;HEIGHT:40%;
   font-size: 25px;
   cursor: pointer;
 }
+
+.fit {
+  max-width: 100%;
+  max-height: 100%;
+  margin:0% 20%;
+}
+
 
 .btn:hover {
   background-color: red;
@@ -37,13 +60,18 @@ WIDTH:100px;HEIGHT:400px;
 </head>
 
 <body style="background-color:powderblue;">
+<div id = "body">
 <h1  style="text-align:center; font-size:100px;" > <B> MIT-AERO  </b> </h1>
 <h2  style="text-align:right; font-size:45px;background-color:tomato;" > <B> Being There is Everything  </b> </h1>
-<button class="btp" onclick="prev()" ><i class="fa fa-arrow-left"></i></button>
-<img style = " position : absolute; TOP : 280px; LEFT : 200px; " id="myImage" src = "logo.png" width="1000" height="400">
-<button class="btn" onclick="next()" ><i class="fa fa-arrow-right"></i></button>
-<h2  style=" position : absolute; TOP : 680px; LEFT : 450px; font-size:45px;" > <B> Glipses of our achievements </b> </h1>
+<h2  style="text-align:center; font-size:45px;" > <B> Glipses of our achievements </b> </h1>
 
+<button style="vertical-align:middle" class="btp" onclick="prev()" ><i class="fa fa-arrow-left"></i></button>
+<div class="imgbox">
+
+<img class="center-fit" id="myImage" src = "logo.png"  width=80%  height="500" >
+</div>
+<button style="vertical-align:middle" class="btn" onclick="next()" ><i class="fa fa-arrow-right"></i></button>
+</div>
 <script src="index.js"> </script>
 
 </body>
